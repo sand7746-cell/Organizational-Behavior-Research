@@ -38,3 +38,4 @@ Correlation and regression outputs were analyzed to determine which IVs signific
 
 ## Findings Presentaion
 Results interpretated and presented to an open audience.
+[![Presentation](Presentation.png)](https://www.canva.com/design/DAG3FxvSsXU/poZaOm1InvJzmvsn2vr2cg/edit?utm_content=DAG3FxvSsXU&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
