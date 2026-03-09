@@ -24,7 +24,7 @@ Imported cleaned dataset into RStudio.
 - Generated a correlation matrix to examine relationships among IVs and DV.
 - Significance threshold: p < 0.05
 
-![Correlation Matrix](Correlations.png)
+![Correlation Matrix](CorrelationMatrix.png)
 
 
 ## Multiple Regression
@@ -34,7 +34,7 @@ Conducted regression with Organizational Commitment as DV. Recorded:
 - Adjusted R² (model fit)
 Correlation and regression outputs were analyzed to determine which IVs significantly predict the DV.
 
-![Regression Matrix](Regressions.png)
+![Regression Matrix](RegressionTable.png)
 
 ## Findings Presentaion
 Results interpretated and presented to an open audience.
