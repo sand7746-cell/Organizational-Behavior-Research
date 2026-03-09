@@ -1,0 +1,48 @@
+## Defined a small helper function that creates a clean, aligned correlation table with significance stars
+
+library(Hmisc)
+corstars_aligned <- function(x, method = c("pearson","spearman"),
+                             removeTriangle = c("upper","lower","none")) {
+  x <- as.matrix(x)
+  R <- Hmisc::rcorr(x, type = method[1])
+  r <- round(R$r, 2)
+  p <- R$P
+  
+  stars <- ifelse(p < .0001,"****", ifelse(p < .001,"*** ",
+           ifelse(p < .01,"**  ", ifelse(p < .05,"*   ","    "))))
+
+  fmt_nolead0 <- function(v){ 
+    s <- sprintf("%.2f", v)
+    s <- sub("^0\\.",".", s)
+    s <- sub("^-0\\.","-.", s)
+    s
+  }
+  
+  r_fmt <- fmt_nolead0(r)
+  out <- matrix(sprintf("%5s%-4s", r_fmt, stars), nrow = nrow(r))
+  rownames(out) <- colnames(x)
+  colnames(out) <- colnames(x)
+  
+  diag(out) <- sprintf("%5s    ", fmt_nolead0(diag(r)))
+  
+  rt <- match.arg(removeTriangle)
+  if (rt=="upper") out[upper.tri(out, diag=TRUE)] <- ""
+  if (rt=="lower") out[lower.tri(out, diag=TRUE)] <- ""
+
+  pad_width <- 9
+  center_pad <- function(txt, width=pad_width){
+    pad_total <- max(width - nchar(txt), 0)  
+    left <- floor(pad_total/2)
+    right <- ceiling(pad_total/2)
+    paste0(strrep(" ", left), txt, strrep(" ", right))
+  }
+  
+  colnames(out) <- vapply(colnames(x), center_pad, FUN.VALUE = character(1))
+  
+  noquote(as.data.frame(out, stringsAsFactors = FALSE))
+}
+
+## Created the correlation tables
+
+cor_table <- corstars_aligned(OB, removeTriangle = "upper")
+cor_table
