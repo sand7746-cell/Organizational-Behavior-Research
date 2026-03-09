@@ -37,5 +37,10 @@ Correlation and regression outputs were analyzed to determine which IVs signific
 ![Regression Matrix](RegressionTable.png)
 
 ## Findings Presentaion
-Results interpretated and presented to an open audience.
-[![Presentation](Presentation.png)](https://www.canva.com/design/DAG3FxvSsXU/poZaOm1InvJzmvsn2vr2cg/edit?utm_content=DAG3FxvSsXU&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
+Results interpretated and presented to an open audience. Image linked to full presentation.
+
+<p>
+  <a href="https://www.canva.com/design/DAG3FxvSsXU/poZaOm1InvJzmvsn2vr2cg/edit?utm_content=DAG3FxvSsXU&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton">
+    <img src="Presentation.png" alt="Presentation" width="400"/>
+  </a>
+</p>
