@@ -23,7 +23,9 @@ Mean (M) and standard deviation (SD) calculated for all variables to assess scal
 Imported cleaned dataset into RStudio.
 - Generated a correlation matrix to examine relationships among IVs and DV.
 - Significance threshold: p < 0.05
-		
+
+![Correlation Matrix](Correlations.png)
+
 
 ## Multiple Regression
 Conducted regression with Organizational Commitment as DV. Recorded:
@@ -31,6 +33,8 @@ Conducted regression with Organizational Commitment as DV. Recorded:
 - p-values (significance)
 - Adjusted R² (model fit)
 Correlation and regression outputs were analyzed to determine which IVs significantly predict the DV.
+
+![Regression Matrix](Regressions.png)
 
 ## Findings Presentaion
 Results interpretated and presented to an open audience.
